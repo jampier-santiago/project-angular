@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway:wght@700&display=swap");
+
+// Fuentes
+$font-title: "Raleway", sans-serif;
+$font-text: "Quicksand", sans-serif;
+
+// Colores
+$dark: #07070a;
+$light: #dcd6f7;
+$blue: #188fa7;
+
+// --- Mixins ---
+@mixin alignWidthFlex($horizontal, $vertical, $direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $horizontal;
+  align-items: $vertical;
+}
+
+.container-dashboard {
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+// Responsive design
+@media screen and (min-width: 768px) {
+  .container-dashboard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

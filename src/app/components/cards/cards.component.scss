@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway:wght@700&display=swap");
+
+// Fuentes
+$font-title: "Raleway", sans-serif;
+$font-text: "Quicksand", sans-serif;
+
+// Colores
+$dark: #07070a;
+$light: #dcd6f7;
+$blue: #188fa7;
+
+// --- Mixins ---
+@mixin alignWidthFlex($horizontal, $vertical, $direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $horizontal;
+  align-items: $vertical;
+}
+
+.container-card {
+  height: 120px;
+  border-radius: 15px;
+  @include alignWidthFlex(center, center, row);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+    box-shadow: 0px 0px 10px inset rgba(0, 0, 0, 0.3);
+  }
+
+  span {
+    font-family: $font-text;
+  }
+}

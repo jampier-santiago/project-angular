@@ -1,0 +1,23 @@
+<nav class="container-nav">
+  <h2>{{ activePage }}</h2>
+  <div
+    [ngClass]="seeMenu ? 'btn-menu active' : 'btn-menu'"
+    (click)="updateMenuView()"
+  >
+    <img src="assets/icons/menu.svg" alt="Icono de menu" />
+  </div>
+</nav>
+
+<section class="container-menu" *ngIf="seeMenu">
+  <div *ngFor="let link of routes">
+    <div class="container-menu__background">
+      <div
+        class="item-menu"
+        (click)="updateNameActivePage(link)"
+        [routerLink]="createRoute(link)"
+      >
+        <h3>{{ link }}</h3>
+      </div>
+    </div>
+  </div>
+</section>

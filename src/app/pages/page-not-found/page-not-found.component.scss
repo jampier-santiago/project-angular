@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway:wght@700&display=swap");
+
+// Fuentes
+$font-title: "Raleway", sans-serif;
+$font-text: "Quicksand", sans-serif;
+
+// --- Mixins ---
+@mixin alignWidthFlex($horizontal, $vertical, $direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $horizontal;
+  align-items: $vertical;
+}
+
+.container-page-not-found {
+  width: 100%;
+  height: 80vh;
+  @include alignWidthFlex(center, center, row);
+
+  h1 {
+    font-family: $font-title;
+    font-size: 50px;
+    letter-spacing: 2px;
+  }
+}
