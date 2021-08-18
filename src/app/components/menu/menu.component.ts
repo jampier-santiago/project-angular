@@ -26,15 +26,18 @@ export class MenuComponent implements OnInit {
     this.routes = this.routesService.getRoutes();
   }
 
+  // Actualizar el estado de la visualización del menu
   updateMenuView(): void {
     this.seeMenu = !this.seeMenu;
   }
 
+  // Metodo encargado de enviar la actualización del nombre utilizado en le menu, para saber en que pagina se encuentra
   updateNameActivePage(name: string): void {
     this.routesService.updateNameActivePage(name);
     this.updateMenuView();
   }
 
+  // Metodo encargado de crear las rutas con respecto al nombre utilizado
   createRoute(name: string, id?: number): string {
     return this.routesService.createRoute(name, id);
   }

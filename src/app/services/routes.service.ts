@@ -41,7 +41,7 @@ export class RoutesService {
     if (name == 'inicio') {
       route = ``;
     } else if (name == 'lista usuarios') {
-      route = `usuarios`;
+      route = `/usuarios`;
     } else {
       const action = name.split(' ')[0];
 

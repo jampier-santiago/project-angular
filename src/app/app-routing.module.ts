@@ -7,7 +7,7 @@ import { CreateUserComponent } from './pages/create-user/create-user.component';
 import { InfoUserComponent } from './pages/info-user/info-user.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'usuarios', component: UsersComponent },
   { path: 'usuarios/crear', component: CreateUserComponent },
