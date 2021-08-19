@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'usuarios', component: UsersComponent },
   { path: 'usuarios/crear', component: CreateUserComponent },
-  { path: 'usuarios/:actions/:id', component: InfoUserComponent },
+  { path: 'usuarios/:action/:id', component: InfoUserComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

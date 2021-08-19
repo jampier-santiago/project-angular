@@ -1,0 +1,12 @@
+<section class="modal" *ngIf="message != ''">
+  <div class="modal__close">
+    <img
+      src="assets/icons/close.svg"
+      alt="icono de una X"
+      (click)="closeModal()"
+    />
+  </div>
+  <div class="modal__message">
+    <h2>{{ message }}</h2>
+  </div>
+</section>

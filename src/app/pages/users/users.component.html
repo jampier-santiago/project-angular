@@ -1,1 +1,11 @@
-<p>users works!</p>
+<section class="table-users">
+  <div class="table-users__title">
+    <h1>Usuarios</h1>
+  </div>
+  <div class="table-users__body">
+    <app-table-users
+      *ngFor="let user of listUsers"
+      [user]="user"
+    ></app-table-users>
+  </div>
+</section>

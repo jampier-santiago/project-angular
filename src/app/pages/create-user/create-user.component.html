@@ -1,1 +1,52 @@
-<p>create-user works!</p>
+<section class="container-new-user">
+  <div class="container-new-user__title">
+    <h1>Crear Usuario</h1>
+  </div>
+  <form class="container-new-user__body" (ngSubmit)="validateData()">
+    <div class="item-table-new-user">
+      <label for="userName">Nombre del usuario</label>
+      <input
+        type="text"
+        name="userName"
+        id="userName"
+        [(ngModel)]="user.name"
+      />
+    </div>
+    <div class="item-table-new-user">
+      <label for="identificationNumber">Número de cedula</label>
+      <input
+        type="number"
+        name="identificationNumber"
+        id="identificationNumber"
+        min="0"
+        [(ngModel)]="user.identification"
+      />
+    </div>
+    <div class="item-table-new-user">
+      <label for="phoneNumbre">Número de celular del usuario</label>
+      <input
+        type="number"
+        name="phoneNumbre"
+        id="phoneNumbre"
+        [(ngModel)]="user.phoneNumber"
+      />
+    </div>
+    <div class="item-table-new-user">
+      <label for="emailUser">Email del usuario</label>
+      <input
+        type="email"
+        name="emailUser"
+        id="emailUser"
+        required=""
+        [(ngModel)]="user.email"
+      />
+    </div>
+    <div class="btn-table">
+      <button type="submit">Crear</button>
+    </div>
+  </form>
+  <app-modal
+    (newMessage)="updateMessage($event)"
+    [message]="message"
+  ></app-modal>
+</section>

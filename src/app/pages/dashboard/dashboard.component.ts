@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudService } from 'src/app/services/crud.service';
 import { RoutesService } from 'src/app/services/routes.service';
 
 @Component({
@@ -9,7 +10,10 @@ import { RoutesService } from 'src/app/services/routes.service';
 export class DashboardComponent implements OnInit {
   routes: string[];
 
-  constructor(private routesService: RoutesService) {
+  constructor(
+    private routesService: RoutesService,
+    private crudService: CrudService
+  ) {
     this.routes = [];
   }
 

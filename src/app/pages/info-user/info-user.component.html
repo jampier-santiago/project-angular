@@ -1,1 +1,64 @@
-<p>info-user works!</p>
+<section class="info-user">
+  <div class="info-user__title">
+    <h1>{{ action }} usuario</h1>
+  </div>
+  <form class="info-user__body" (ngSubmit)="validateData()">
+    <div class="item-info-user">
+      <label for="idUser">id: </label>
+      <input
+        type="text"
+        name="idUser"
+        id="idUser"
+        [(ngModel)]="user.id"
+        disabled="true"
+      />
+    </div>
+    <div class="item-info-user">
+      <label for="userName">Nombre</label>
+      <input
+        type="text"
+        name="userName"
+        id="userName"
+        [(ngModel)]="user.name"
+        [disabled]="disabled"
+      />
+    </div>
+    <div class="item-info-user">
+      <label for="identificationUser">Numero de identificacion</label>
+      <input
+        type="number"
+        name="identificationUser"
+        id="identificationUser"
+        [(ngModel)]="user.identification"
+        [disabled]="disabled"
+      />
+    </div>
+    <div class="item-info-user">
+      <label for="userEmail">Email</label>
+      <input
+        type="text"
+        name="userEmail"
+        id="userEmail"
+        [(ngModel)]="user.email"
+        [disabled]="disabled"
+      />
+    </div>
+    <div class="item-info-user">
+      <label for="phoneNumber">Numero de celular</label>
+      <input
+        type="number"
+        name="phoneNumber"
+        id="phoneNumber"
+        [(ngModel)]="user.phoneNumber"
+        [disabled]="disabled"
+      />
+    </div>
+    <div class="btn-form" *ngIf="!disabled">
+      <button>Actualizar</button>
+    </div>
+  </form>
+  <app-modal
+    (newMessage)="updateMessage($event)"
+    [message]="message"
+  ></app-modal>
+</section>

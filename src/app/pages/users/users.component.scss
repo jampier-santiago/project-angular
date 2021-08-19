@@ -1,0 +1,44 @@
+// Fuentes
+$font-title: "Raleway", sans-serif;
+$font-text: "Quicksand", sans-serif;
+
+// Colores
+$dark: #07070a;
+$light: #dcd6f7;
+$blue: #188fa7;
+
+// --- Mixins ---
+@mixin alignWidthFlex($horizontal, $vertical, $direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $horizontal;
+  align-items: $vertical;
+}
+
+.table-users {
+  width: 100%;
+  height: 70px;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+
+  &__title {
+    width: 100%;
+    margin-top: 20px;
+    @include alignWidthFlex(center, center, row);
+
+    h1 {
+      margin: 0;
+      font-family: $font-title;
+      letter-spacing: 2px;
+    }
+  }
+
+  &__body {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+  }
+}

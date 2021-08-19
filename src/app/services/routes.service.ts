@@ -10,13 +10,7 @@ export class RoutesService {
   private seeMenu = new Subject<boolean>();
 
   constructor() {
-    this.routes = [
-      'inicio',
-      'lista usuarios',
-      'editar usuarios',
-      'crear usuario',
-      'ver usuario',
-    ];
+    this.routes = ['inicio', 'lista usuarios', 'crear usuario'];
   }
 
   // Metodo encargado de devolver las rutas
@@ -46,7 +40,7 @@ export class RoutesService {
       const action = name.split(' ')[0];
 
       if (action == 'crear') {
-        route = `usuarios/${action}`;
+        route = `/usuarios/${action}`;
       } else {
         route = `usuarios/${action}/${id ? id : ''}`;
       }

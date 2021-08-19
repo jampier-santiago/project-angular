@@ -1,0 +1,17 @@
+<div class="row-table">
+  <span class="row-table__id">{{ id }}</span>
+  <span class="row-table__name">{{ name }}</span>
+  <div class="row-table__button">
+    <img
+      src="assets/icons/edit.svg"
+      alt="Icono de un lapiz"
+      routerLink="editar/{{ id }}"
+    />
+    <img
+      src="assets/icons/see.svg"
+      alt="Icono de un ojo"
+      routerLink="ver/{{ id }}"
+    />
+  </div>
+</div>
+<hr />
