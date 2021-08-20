@@ -57,7 +57,8 @@ export class CrudService {
 
     const temporaryData = [...this.users];
     temporaryData.forEach((user: any) => {
-      if (id == idUser) {
+      if (user.id == idUser) {
+        console.log(user);
         user.name = name;
         user.identification = identification;
         user.email = email;
@@ -65,6 +66,7 @@ export class CrudService {
       }
     });
 
+    console.log(temporaryData);
     this.users = temporaryData;
   }
 
